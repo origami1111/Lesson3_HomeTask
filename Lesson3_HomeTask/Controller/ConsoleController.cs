@@ -7,15 +7,15 @@ namespace Lesson3_HomeTask.Controller
         public static void Start()
         {
             Airplane airplaneAirbusA320a =
-                new PassengerAirplane(AirplaneManufacturer.Airbus, "A320", 4000, 24210, 150, 1200);
+                new PassengerAirplane(AirplaneManufacturer.Airbus, AirplaneModels.AirbusModel, 4000, 24210, 150, 1200);
             Airplane airplaneAirBusA320b =
-                new PassengerAirplane(AirplaneManufacturer.Airbus, "A320", 12000, 24210, 150, 1200);
+                new PassengerAirplane(AirplaneManufacturer.Airbus, AirplaneModels.AirbusModel, 12000, 24210, 150, 1200);
             Airplane airplaneBoeing737 =
-                new PassengerAirplane(AirplaneManufacturer.Boeing, "737", 5000, 26035, 176, 2300);
+                new PassengerAirplane(AirplaneManufacturer.Boeing, AirplaneModels.BoeingModel, 5000, 26035, 176, 2300);
             Airplane airplaneMilitary1 =
-                new MilitaryAirplane(AirplaneManufacturer.Bombardier, "mil. plane", 1000, 20000, 1000);
+                new MilitaryAirplane(AirplaneManufacturer.Bombardier, AirplaneModels.BombardierModel, 1000, 20000, 1000);
             Airplane airplaneMilitary2 =
-                new MilitaryAirplane(AirplaneManufacturer.Bombardier, "mil. plane", 1000, 20000, 1000);
+                new MilitaryAirplane(AirplaneManufacturer.Bombardier, AirplaneModels.BombardierModel, 1000, 20000, 1000);
 
             Airline airline = new Airline("New Arliana Airlines");
             airline.AddAirplane(airplaneAirbusA320a);

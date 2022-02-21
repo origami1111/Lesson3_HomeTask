@@ -5,8 +5,8 @@ namespace Lesson3_HomeTask
 {
     public class Airline
     {
-        public string Name { get; private set; }
-        public List<Airplane> Airplanes { get; private set; }
+        public string Name { get; }
+        public List<Airplane> Airplanes { get; }
 
         public Airline(string name)
         {

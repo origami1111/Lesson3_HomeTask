@@ -4,10 +4,10 @@ namespace Lesson3_HomeTask
 {
     public abstract class Airplane : IComparable<Airplane>
     {
-        public AirplaneManufacturer Manufacturer { get; private set; }
-        public string Model { get; private set; }
-        public uint FlightRange { get; private set; }
-        public uint FuelConsumption { get; private set; }
+        public AirplaneManufacturer Manufacturer { get; }
+        public string Model { get; }
+        public uint FlightRange { get; }
+        public uint FuelConsumption { get; }
 
         public abstract uint PassengerSeats { get; }
         public abstract uint CarryingCapacity { get; }
