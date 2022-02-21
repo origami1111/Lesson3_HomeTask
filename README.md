@@ -1,4 +1,4 @@
-# Lesson3_HomeTask
+# OOP in .NET
 
 Design an object model for a given domain. In the work, ALL the functionality required in the task must be implemented without fail. 
 Requirements:
