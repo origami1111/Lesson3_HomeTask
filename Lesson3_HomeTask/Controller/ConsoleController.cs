@@ -24,36 +24,24 @@ namespace Lesson3_HomeTask.Controller
             airline.AddAirplane(airplaneMilitary1);
             airline.AddAirplane(airplaneMilitary2);
 
-            Console.WriteLine();
-            Console.WriteLine("Planes before sorting");
-            Console.WriteLine();
+            Console.WriteLine("\nPlanes before sorting\n");
             airline.PrintAirplanes();
 
-            Console.WriteLine();
-            Console.WriteLine($"Deleting plane with params manufacturer = {AirplaneManufacturer.Bombardier} and model = mil. plane");
+            Console.WriteLine($"\nDeleting plane with params manufacturer = {AirplaneManufacturer.Bombardier} and model = mil. plane\n");
             airline.DeleteAirplane(AirplaneManufacturer.Bombardier, "mil. plane");
-            Console.WriteLine();
 
-            Console.WriteLine();
-            Console.WriteLine("Printing planes after deleting...");
-            Console.WriteLine();
+            Console.WriteLine("\nPrinting planes after deleting...\n");
             airline.PrintAirplanes();
 
-            Console.WriteLine();
-            Console.WriteLine("Sorting planes by flight range...");
-            Console.WriteLine();
+            Console.WriteLine("\nSorting planes by flight range...\n");
             airline.SortAirplaneByFlightRange();
             airline.PrintAirplanes();
 
-            Console.WriteLine();
-            Console.WriteLine($"Total passenger seats   = {airline.CalculateTotalPassengerSeats()}");
+            Console.WriteLine($"\nTotal passenger seats   = {airline.CalculateTotalPassengerSeats()}");
             Console.WriteLine($"Total carrying capacity = {airline.CalculateTotalCarryingCapacity()}");
-            Console.WriteLine();
 
-            Console.WriteLine();
-            Console.WriteLine($"Finding plane by manufacturer = {AirplaneManufacturer.Boeing} and model = 737");
+            Console.WriteLine($"\nFinding plane by manufacturer = {AirplaneManufacturer.Boeing} and model = 737 \n");
             Console.WriteLine(airline.FindPlaneByManufacturerAndModel(AirplaneManufacturer.Boeing, "737"));
-            Console.WriteLine();
 
         }
     }

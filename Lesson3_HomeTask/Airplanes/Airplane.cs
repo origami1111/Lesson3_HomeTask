@@ -1,6 +1,8 @@
-﻿namespace Lesson3_HomeTask
+﻿using System;
+
+namespace Lesson3_HomeTask
 {
-    public abstract class Airplane
+    public abstract class Airplane : IComparable<Airplane>
     {
         public AirplaneManufacturer Manufacturer { get; private set; }
         public string Model { get; private set; }
@@ -18,5 +20,9 @@
             FuelConsumption = fuelConsumption;
         }
 
+        public int CompareTo(Airplane other)
+        {
+            return FlightRange.CompareTo(other.FlightRange);
+        }
     }
 }

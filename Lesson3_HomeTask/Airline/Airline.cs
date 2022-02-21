@@ -15,12 +15,6 @@ namespace Lesson3_HomeTask
             Airplanes = new List<Airplane>();
         }
 
-        public Airline(string name, List<Airplane> airplanes)
-        {
-            Name = name;
-            Airplanes = airplanes;
-        }
-
         public void AddAirplane(Airplane airplane)
         {
             Airplanes.Add(airplane);
@@ -28,23 +22,47 @@ namespace Lesson3_HomeTask
 
         public void DeleteAirplane(AirplaneManufacturer manufacturer, string model)
         {
-            Airplanes.Remove(Airplanes.Where(plane => plane.Manufacturer == manufacturer &&
-                                                      plane.Model == model).FirstOrDefault());
+            Airplane desiredAirplane = null;
+
+            foreach (var airplane in Airplanes)
+            {
+                if (airplane.Manufacturer == manufacturer && airplane.Model == model)
+                {
+                    desiredAirplane = airplane;
+                    break;
+                }
+            }
+
+            Airplanes.Remove(desiredAirplane);
         }
 
         public uint CalculateTotalCarryingCapacity()
         {
-            return Convert.ToUInt32(Airplanes.Sum(plane => plane.CarryingCapacity));
+            uint totalCarryingCapacity = 0;
+
+            foreach (var airplane in Airplanes)
+            {
+                totalCarryingCapacity += airplane.CarryingCapacity;
+            }
+
+            return totalCarryingCapacity;
         }
 
         public uint CalculateTotalPassengerSeats()
         {
-            return Convert.ToUInt32(Airplanes.Sum(plane => plane.PassengerSeats));
+            uint totalPassengerSeats = 0;
+
+            foreach (var airplane in Airplanes)
+            {
+                totalPassengerSeats += airplane.PassengerSeats;
+            }
+
+            return totalPassengerSeats;
         }
 
         public void SortAirplaneByFlightRange()
         {
-            Airplanes = Airplanes.OrderBy(plane => plane.FlightRange).ToList();
+            Airplanes.Sort();
         }
 
         public Airplane FindPlaneByManufacturerAndModel(AirplaneManufacturer manufacturer, string model)
@@ -65,7 +83,7 @@ namespace Lesson3_HomeTask
 
             foreach (var plane in Airplanes)
             {
-                Console.WriteLine("-------------------------------------------------------------------------------------------------------------------------------------------");
+                Console.WriteLine(new string('-', 139));
                 Console.WriteLine(plane);
             }
         }

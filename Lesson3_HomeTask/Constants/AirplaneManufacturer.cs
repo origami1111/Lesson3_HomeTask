@@ -4,9 +4,6 @@
     {
         Airbus,
         Boeing,
-        Safran,
-        Leonardo,
-        Rolls_Royse_Holdings,
         Bombardier
     }
 }
