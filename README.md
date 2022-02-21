@@ -1,19 +1,19 @@
-# Lesson3_HomeTask
+# OOP in .NET
 
-Спроектировать объектную модель для заданной предметной области. В работе в обязательном порядке должен быть реализован ВЕСЬ требующийся в задании функционал. 
-Требования:
-- Использовать: классы, наследование, интерфейсы, полиморфизм, инкапсуляцию;
-- Каждый класс, метод и переменная должны иметь исчерпывающее смысл, название и информативный состав. Необходимо точно продумать, какие классы необходимы для решения задачи;
-- Наследование должно применяться только тогда, когда это имеет смысл;
-- Классы должны быть грамотно разложены по неймспейсам;
-- В качестве структур для хранения данных организовать собственную структуру как обертку над массивом 
-  (класс, который содержит массив для хранения элементов и обеспечивает необходимые действия для работы с ним (добавление, удаление и т.д.));
-- Код должен быть отформатирован и соответствовать C# Code Convention.
+Design an object model for a given domain. In the work, ALL the functionality required in the task must be implemented without fail. 
+Requirements:
+- Use: classes, inheritance, interfacec, polymorphism, encapsulation;
+- Each class, method and variable must have an exhaustive meaning, name and descriptive content. It is necessary to think over exactly what classes are needed to solve the   problem;
+- Inheritance should only be used when it makes sense;
+- Classes should be correctly decomposed by namespaces;
+- As structures for storing data, organize your own structure as a wrapper over an array
+  (a class that contains an array for storing elements and provides the necessary actions to work with it (adding, deleting, etc.));
+- Code must be formatted and conform C# Code Convention.
 
 Task:
-Авиакомпания.
-- Определить иерархию самолетов. 
-- Создать авиакомпанию. 
-- Посчитать общую вместимость и грузоподъемность. 
-- Провести сортировку самолетов компании по дальности полета. 
-- Найти самолет в компании, соответствующий заданному диапазону параметров. 
+Airline.
+- Define aircraft hierarchy;
+- Create an airline;
+- Calculate the total capacity and carrying capacity;
+- Sort the company's aircraft by flight range;
+- Find an aircraft in the company that matches the specified range of parameters;
