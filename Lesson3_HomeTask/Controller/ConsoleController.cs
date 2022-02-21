@@ -17,7 +17,7 @@ namespace Lesson3_HomeTask.Controller
             Airplane airplaneMilitary2 =
                 new MilitaryAirplane(AirplaneManufacturer.Bombardier, "mil. plane", 1000, 20000, 1000);
 
-            Airline airline = new Airline("New Airline");
+            Airline airline = new Airline("New Arliana Airlines");
             airline.AddAirplane(airplaneAirbusA320a);
             airline.AddAirplane(airplaneAirBusA320b);
             airline.AddAirplane(airplaneBoeing737);

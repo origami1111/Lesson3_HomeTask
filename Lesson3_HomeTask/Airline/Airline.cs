@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Lesson3_HomeTask
 {
@@ -67,8 +66,18 @@ namespace Lesson3_HomeTask
 
         public Airplane FindPlaneByManufacturerAndModel(AirplaneManufacturer manufacturer, string model)
         {
-            return Airplanes.Where(plane => plane.Manufacturer == manufacturer &&
-                                            plane.Model == model).FirstOrDefault();
+            Airplane desiredAirplane = null;
+
+            foreach (var airplane in Airplanes)
+            {
+                if (airplane.Manufacturer == manufacturer && airplane.Model == model)
+                {
+                    desiredAirplane = airplane;
+                    break;
+                }
+            }
+
+            return desiredAirplane;
         }
 
         public void PrintAirplanes()

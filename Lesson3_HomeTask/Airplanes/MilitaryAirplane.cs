@@ -6,10 +6,10 @@
         public override uint CarryingCapacity { get; }
 
         public MilitaryAirplane(AirplaneManufacturer manufacturer, string model, uint flightRange,
-            uint fuelConsumption, uint carryingCapacity)
+            uint fuelConsumption, uint carryingCapacity, uint passengerSeats = 0)
             : base(manufacturer, model, flightRange, fuelConsumption)
         {
-            PassengerSeats = 0;
+            PassengerSeats = passengerSeats;
             CarryingCapacity = carryingCapacity;
         }
 
