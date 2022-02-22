@@ -2,14 +2,27 @@
 {
     public class MilitaryAirplane : Airplane
     {
-        public override uint PassengerSeats { get; }
+        private uint passengerSeats;
+        public override uint PassengerSeats
+        {
+            get
+            {
+                if (passengerSeats == 0)
+                {
+                    throw new IsZeroException("Military airplane can not have passenger seats");
+                }
+
+                return passengerSeats;
+            }
+
+        }
         public override uint CarryingCapacity { get; }
 
         public MilitaryAirplane(AirplaneManufacturer manufacturer, string model, uint flightRange,
             uint fuelConsumption, uint carryingCapacity, uint passengerSeats = 0)
             : base(manufacturer, model, flightRange, fuelConsumption)
         {
-            PassengerSeats = passengerSeats;
+            this.passengerSeats = passengerSeats;
             CarryingCapacity = carryingCapacity;
         }
 

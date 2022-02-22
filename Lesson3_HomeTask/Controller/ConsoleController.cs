@@ -15,7 +15,7 @@ namespace Lesson3_HomeTask.Controller
             Airplane airplaneMilitary1 =
                 new MilitaryAirplane(AirplaneManufacturer.Bombardier, AirplaneModels.BombardierModel, 1000, 20000, 1000);
             Airplane airplaneMilitary2 =
-                new MilitaryAirplane(AirplaneManufacturer.Bombardier, AirplaneModels.BombardierModel, 1000, 20000, 1000);
+                new MilitaryAirplane(AirplaneManufacturer.Bombardier, AirplaneModels.BombardierModel, 1000, 20000, 1000, 0);
 
             Airline airline = new Airline("New Arliana Airlines");
             airline.AddAirplane(airplaneAirbusA320a);
@@ -37,7 +37,15 @@ namespace Lesson3_HomeTask.Controller
             airline.SortAirplaneByFlightRange();
             airline.PrintAirplanes();
 
-            Console.WriteLine($"\nTotal passenger seats   = {airline.CalculateTotalPassengerSeats()}");
+            try
+            {
+                Console.WriteLine($"\nTotal passenger seats   = {airline.CalculateTotalPassengerSeats()}");
+            }
+            catch (IsZeroException exc)
+            {
+                Console.WriteLine($"Error: {exc.Message}");
+            }
+
             Console.WriteLine($"Total carrying capacity = {airline.CalculateTotalCarryingCapacity()}");
 
             Console.WriteLine($"\nFinding plane by manufacturer = {AirplaneManufacturer.Boeing} and model = 737 \n");
